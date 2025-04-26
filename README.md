@@ -1,6 +1,6 @@
-# Deprem Konsolosu
+# Türkiye Deprem İzleme ve API Sistemi
 
-Bu proje, deprem verilerini görselleştirmek ve analiz etmek için geliştirilmiş bir web uygulamasıdır.
+Bu proje, deprem verilerini görselleştirmek ve analiz etmek için geliştirilmiş bir web uygulamasıdır. Proje kritik deprem ve tsunami erken uyarı verilerini ücretsiz olarak sağlamak için geliştiriliyor.
 
 ## 🚀 Teknolojiler
 
