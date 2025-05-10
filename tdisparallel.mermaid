@@ -3,20 +3,29 @@ graph TD
     ProjectTitle["Sonya Topluluğu - Türkiye Deprem İzleme Sistemi<br/><small>TDIS API & Open Source</small>"]:::projectTitle
 
     %% Proje Yönetimi - En Üst Seviye
-    ProjeLideri["Furkan Zihni Özen - Proje Lideri<br/><small>• Proje yönetimi ve stratejik planlama<br/>• Topluluk yönetimi ve mentorluk<br/>• Teknik içerik üretimi ve iletişim</small>"]
-    ProjeKoordinatoru["Nuh Hatipoğlu & Nefise Nur Genç - Proje Koordinatörleri<br/><small>• Günlük operasyonların yönetimi<br/>• Ekip koordinasyonu ve iletişim<br/>• Asana ile proje takibi</small>"]
+    ProjeLideri["Furkan Zihni Özen - Proje Lideri & Product Owner<br/><small>• Proje vizyonu ve stratejik planlama<br/>• Ürün yol haritası ve önceliklendirme<br/>• Paydaş yönetimi ve iletişim</small>"]
+    ProjeKoordinatoru["Nefise Nur Genç - Proje Koordinatörü & Scrum Master<br/><small>• Scrum süreçlerinin yönetimi<br/>• Sprint planlama ve takibi<br/>• Engellerin kaldırılması ve ekip facilitasyonu</small>"]
     ProjeDanismani["Evren Yalnız - Proje Danışmanı<br/><small>• Teknik danışmanlık<br/>• Stratejik planlama desteği<br/>• Yazılım geliştirme danışmanlığı</small>"]
+    
+    %% Scrum ve Proje Yönetimi
+    ScrumYonetimi["Scrum Yönetimi<br/><small>• 2 haftalık sprintler<br/>• Daily Scrum (Discord, 15dk)<br/>• Sprint Planning (Pazartesi)<br/>• Sprint Review (Cuma)<br/>• Retrospective (Cuma)</small>"]:::processNode
+    
+    GitHubYonetimi["GitHub Yönetimi<br/><small>• GitHub Projects ile backlog yönetimi<br/>• Feature branch workflow<br/>• Pull request ve code review<br/>• CI/CD pipeline (GitHub Actions)</small>"]:::processNode
+    
+    IletisimKanallari["İletişim Kanalları<br/><small>• Discord (Günlük iletişim)<br/>• Google Meet (Toplantılar)<br/>• Notion (Dokümantasyon)<br/>• GitHub Discussions (Teknik tartışmalar)</small>"]:::processNode
     
     %% Takım Liderleri - İkinci Seviye
     BackendLideri["Melike Kara & M. Çağatay Balı - Backend Takım Liderleri<br/><small>• Backend ekibinin yönetimi<br/>• Teknik kararların alınması<br/>• Kod kalitesi ve standartların belirlenmesi</small>"]
     BackendDanismani["Ömer Talha Acet - Backend Danışmanı<br/><small>• Teknik danışmanlık ve mentorluk<br/>• Kod review ve best practice önerileri<br/>• Esnek çalışma saatleri ile destek</small>"]
     GOLideri["Oytun Yeldan - GO Ekibi Lideri<br/><small>• GO ile backend geliştirme<br/>• Veritabanı entegrasyonu<br/>• GO ekibinin yönetimi</small>"]
     FrontendLideri["Sena Nur Özcan & Zeynep Lal Kaşıkçı - Frontend Takım Liderleri<br/><small>• Frontend ekibinin yönetimi<br/>• UI/UX standartlarının belirlenmesi<br/>• Kullanıcı deneyimi optimizasyonu</small>"]
-    VeriBilimiLideri["Taylan Kılıçöz & Orhan Murat Tuncer - Veri Bilimi Liderleri<br/><small>• Veri analizi ve modelleme ekibinin yönetimi<br/>• Makine öğrenmesi stratejilerinin belirlenmesi<br/>• Deprem veri analizi ve tahmin sistemleri</small>"]
-    YapayZekaLideri["Şeyda Öksüzoğlu - Yapay Zeka Takım Lideri<br/><small>• AI model geliştirme ve eğitimi<br/>• Deprem tahmin sistemlerinin geliştirilmesi<br/>• Model optimizasyonu ve performans takibi</small>"]
+    VeriBilimiLideri["Taylan Kılıçöz - Veri Bilimi Lideri<br/><small>• Veri analizi ve modelleme ekibinin yönetimi<br/>• Makine öğrenmesi stratejilerinin belirlenmesi<br/>• Deprem veri analizi ve tahmin sistemleri<br/>• Yapay zeka modellerinin yönetimi</small>"]
     TestLideri["Ayçin Kapar - Test Lideri<br/><small>• Test stratejilerinin belirlenmesi<br/>• Test otomasyonu ve kalite kontrol<br/>• Hata yönetimi ve raporlama</small>"]
     GuvenlikLideri["Adham Rashed - Siber Güvenlik Lideri<br/><small>• Güvenlik politikalarının belirlenmesi<br/>• Sistem güvenliği ve veri koruma<br/>• Güvenlik testleri ve risk analizi</small>"]
     DevOpsLideri["Elif Dicle Pamuk - DevOps Lideri<br/><small>• DevOps süreçlerinin yönetimi<br/>• CI/CD pipeline kurulumu<br/>• Docker ve deployment yönetimi</small>"]
+    
+    %% Dokümantasyon ve Kalite
+    DokumantasyonSorumlusu["Dokümantasyon Sorumlusu<br/><small>• Teknik dokümantasyon standartları<br/>• API dokümantasyonu<br/>• Kullanıcı kılavuzları</small>"]:::newRole
     
     %% Backend Takımı
     BackendYardimciLider["Gizem Sarı - Backend Yardımcı Lideri<br/><small>• Java, Python, C# geliştirme<br/>• Spring Boot ile mikroservis<br/>• Backend ekip koordinasyonu</small>"]
@@ -42,20 +51,16 @@ graph TD
     FrontendGelistirici2["Ozan Şentürk - Frontend Geliştirici<br/><small>• Frontend web development<br/>• React.js framework<br/>• Machine learning</small>"]
     FrontendGelistirici3["BZO - Frontend Geliştirici<br/><small>• Frontend geliştirme</small>"]
     FrontendGelistirici4["Gizem Çoban - Frontend Geliştirici<br/><small>• Masaüstü ve web uygulama geliştirme</small>"]
-    UIUXTasarimci["Furkan Esad Uzun - UI/UX Tasarımcı<br/><small>• Web ve mobil arayüz tasarımı<br/>• Kullanıcı deneyimi optimizasyonu<br/>• Responsive tasarım geliştirme</small>"]
     
     %% Veri Bilimi Takımı
     VeriAnalisti1["Furkan GÜNEŞ - Veri Analisti<br/><small>• Python ile veri analizi<br/>• Makine öğrenmesi modelleme<br/>• Deprem veri analizi ve risk modelleme</small>"]
     VeriAnalisti2["Evindar Üçdere - Veri Analisti<br/><small>• Python ile görüntü işleme<br/>• Veri analizi ve işleme<br/>• Görsel veri analizi</small>"]
     VeriAnalisti3["Nisa Nur Aydoğdu - Veri Analisti<br/><small>• Veri analizi ve bilim<br/>• Veri toplama ve işleme<br/>• Ürün geliştirme</small>"]
-    VeriAnalisti4["Aslı Özdemir - Veri Analisti<br/><small>• SQL ve Python ile veri analizi<br/>• Veritabanı tasarımı<br/>• Veri analizi ve raporlama</small>"]
     VeriAnalisti6["Mertcan Sağlam - Veri Analisti<br/><small>• Veri Mühendisliği<br/>• Veri Bilimi<br/>• Python flask backend</small>"]
     VeriAnalisti7["Ozan Özgöçer - Veri Analisti<br/><small>• Yazılım ve veri analizi</small>"]
     VeriAnalisti8["Yusuf Bender - Veri Analisti<br/><small>• Veri İşleme ve Analiz</small>"]
     VeriAnalisti9["Selma Bütün - Veri Analisti<br/><small>• Yapay zeka ve Python</small>"]
-    
-    %% Test Takımı
-    KaliteGuvenceUzmani["İrem Çakmak - QA Engineer<br/><small>• Java ve Python ile test otomasyonu<br/>• Test ve analiz<br/>• Kalite kontrol ve raporlama</small>"]
+    VeriAnalisti10["Mehmet Nur Kavan - Veri Analisti<br/><small>• Veri Bilimi, Makine Öğrenmesi<br/>• Derin Öğrenme, Görüntü İşleme<br/>• Bilgisayarlı Görü</small>"]
     
     %% Siber Güvenlik Takımı
     VeriGuvenligiSorumlusu["Mustafa Uçmaz - Veri Güvenliği Sorumlusu<br/><small>• Sistem güvenliği yönetimi<br/>• Veri güvenliği ve koruma<br/>• Güvenlik testleri ve raporlama</small>"]
@@ -64,7 +69,7 @@ graph TD
     DevOpsUzmani["Kaan Ilgın - DevOps Mühendisi<br/><small>• Docker ile paketleme ve dağıtım<br/>• Yalıtımlı ortam kurulumu<br/>• Cloud alanında bilgi danışmanlığı</small>"]
     
     %% Proje Hedefleri ve Prensipleri
-    ProjeHedefleri["Proje Hedefleri ve Prensipleri<br/><small>• Tamamen açık kaynak ve ücretsiz hizmet<br/>• Sonya Topluluğu'na ait<br/>• Gönüllü katkı temelli<br/>• Asana ile organizasyon yönetimi</small>"]:::projectGoals
+    ProjeHedefleri["Proje Hedefleri ve Prensipleri<br/><small>• Tamamen açık kaynak ve ücretsiz hizmet<br/>• Sonya Topluluğu'na ait<br/>• Gönüllü katkı temelli<br/>• GitHub Projects ile proje yönetimi</small>"]:::projectGoals
 
     %% Hiyerarşik Bağlantılar
     ProjectTitle --> ProjeHedefleri
@@ -72,26 +77,29 @@ graph TD
     ProjeLideri --> ProjeKoordinatoru
     ProjeLideri --> ProjeDanismani
     
+    %% Scrum ve Proje Yönetimi Bağlantıları
+    ProjeKoordinatoru --> ScrumYonetimi
+    ProjeKoordinatoru --> GitHubYonetimi
+    ProjeKoordinatoru --> IletisimKanallari
+    ProjeKoordinatoru --> DokumantasyonSorumlusu
+    
     ProjeLideri --> BackendLideri
     ProjeLideri --> BackendDanismani
     ProjeLideri --> GOLideri
     ProjeLideri --> FrontendLideri
     ProjeLideri --> VeriBilimiLideri
-    ProjeLideri --> YapayZekaLideri
     ProjeLideri --> TestLideri
     ProjeLideri --> GuvenlikLideri
     ProjeLideri --> DevOpsLideri
     
     %% Koordinasyon ilişkileri
-    ProjeKoordinatoru -.-> BackendLideri
-    ProjeKoordinatoru -.-> BackendDanismani
-    ProjeKoordinatoru -.-> GOLideri
-    ProjeKoordinatoru -.-> FrontendLideri
-    ProjeKoordinatoru -.-> VeriBilimiLideri
-    ProjeKoordinatoru -.-> YapayZekaLideri
-    ProjeKoordinatoru -.-> TestLideri
-    ProjeKoordinatoru -.-> GuvenlikLideri
-    ProjeKoordinatoru -.-> DevOpsLideri
+    ScrumYonetimi -.-> BackendLideri
+    ScrumYonetimi -.-> GOLideri
+    ScrumYonetimi -.-> FrontendLideri
+    ScrumYonetimi -.-> VeriBilimiLideri
+    ScrumYonetimi -.-> TestLideri
+    ScrumYonetimi -.-> GuvenlikLideri
+    ScrumYonetimi -.-> DevOpsLideri
     
     %% Takım Bağlantıları
     BackendLideri --> BackendYardimciLider
@@ -115,22 +123,15 @@ graph TD
     FrontendLideri --> FrontendGelistirici2
     FrontendLideri --> FrontendGelistirici3
     FrontendLideri --> FrontendGelistirici4
-    FrontendLideri --> UIUXTasarimci
     
     VeriBilimiLideri --> VeriAnalisti1
     VeriBilimiLideri --> VeriAnalisti2
     VeriBilimiLideri --> VeriAnalisti3
-    VeriBilimiLideri --> VeriAnalisti4
     VeriBilimiLideri --> VeriAnalisti6
     VeriBilimiLideri --> VeriAnalisti7
     VeriBilimiLideri --> VeriAnalisti8
     VeriBilimiLideri --> VeriAnalisti9
-    
-    YapayZekaLideri --> VeriAnalisti1
-    YapayZekaLideri --> VeriAnalisti2
-    YapayZekaLideri --> VeriAnalisti9
-    
-    TestLideri --> KaliteGuvenceUzmani
+    VeriBilimiLideri --> VeriAnalisti10
     
     GuvenlikLideri --> VeriGuvenligiSorumlusu
     
