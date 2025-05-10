@@ -1,22 +1,67 @@
-graph LR
+graph TD
     %% Proje Başlığı ve Açıklaması
-    ProjectTitle["Sonya Topluluğu - Türkiye Deprem İzleme Sistemi<br/><small>TDIS API & Open Source</small>"]:::projectTitle
+    ProjectTitle["Sonya Topluluğu - Türkiye Deprem İzleme Sistemi<br/><small>TDIS API & Open Source</small>"]
 
+    %% Sonya Yönetimi
+    SonyaYonetimi["Sonya Yönetimi"]
+    
+    %% Üst Yönetim
+    subgraph ToplulukYonetimi["Topluluk Yönetimi"]
+        ToplulukYoneticisi1["Emre Gürsöz - Topluluk Yöneticisi<br/><small>• Topluluk stratejisi ve yönetimi<br/>• Topluluk gelişimi ve büyüme<br/>• Topluluk ilişkileri yönetimi</small>"]
+        ToplulukYoneticisi2["Ekrem Torun - Topluluk Yöneticisi<br/><small>• Topluluk stratejisi ve gelişimi<br/>• Mentorluk ve rehberlik<br/>• Topluluk ilişkileri yönetimi</small>"]
+    end
+
+    subgraph YazilimYonetimi["Yazılım Yönetimi"]
+        YazilimDepartmanYoneticisi1["Cafer İhsan Arpacı - Yazılım Departmanı Yöneticisi<br/><small>• Yazılım departmanı yönetimi<br/>• Teknik strateji ve mimari<br/>• Proje yönetimi ve koordinasyon</small>"]
+    end
+    
     %% Proje Yönetimi - En Üst Seviye
-    ProjeLideri["Furkan Zihni Özen - Proje Lideri<br/><small>• Proje yönetimi ve stratejik planlama<br/>• Topluluk yönetimi ve mentorluk<br/>• Teknik içerik üretimi ve iletişim</small>"]
-    ProjeKoordinatoru["Nuh Hatipoğlu - Proje Koordinatörü<br/><small>• Günlük operasyonların yönetimi<br/>• Ekip koordinasyonu ve iletişim<br/>• Asana ile proje takibi</small>"]
+    ProjeLideri["Furkan Zihni Özen - Proje Lideri & Product Owner<br/><small>• Proje vizyonu ve stratejik planlama<br/>• Ürün yol haritası ve önceliklendirme<br/>• Paydaş yönetimi ve iletişim</small>"]
+    
+    %% Koordinatörler (Furkan'ın Yardımcıları)
+    ProjeKoordinatoru["Nefise Nur Genç - Proje Koordinatörü<br/><small>• Günlük operasyonların yönetimi<br/>• Ekip koordinasyonu ve iletişim<br/>• GitHub Projects ile görev takibi</small>"]
+    YardimciKoordinatoru["Evren Yalnız - Yardımcı Proje Koordinatörü<br/><small>• Toplantı organizasyonu<br/>• Dokümantasyon yönetimi<br/>• Ekipler arası iletişim koordinasyonu</small>"]
+    
+    %% Scrum Master
+    ScrumMaster["Mertcan Sağlam - Scrum Master<br/><small>• Scrum süreçlerinin yönetimi<br/>• Sprint planlama ve takibi<br/>• Engellerin kaldırılması ve ekip facilitasyonu</small>"]
+    
+    %% Scrum ve Proje Yönetimi
+    ScrumYonetimi["Scrum Yönetimi<br/><small>• 2 haftalık sprintler<br/>• Daily Scrum (Discord, 15dk)<br/>• Sprint Planning (Pazartesi)<br/>• Sprint Review (Cuma)<br/>• Retrospective (Cuma)</small>"]
+    
+    GitHubYonetimi["GitHub Yönetimi<br/><small>• GitHub Projects ile backlog yönetimi<br/>• Feature branch workflow<br/>• Pull request ve code review<br/>• CI/CD pipeline (GitHub Actions)</small>"]
+    
+    IletisimKanallari["İletişim Kanalları<br/><small>• Discord (Günlük iletişim)<br/>• Google Meet (Toplantılar)<br/>• Notion (Dokümantasyon)<br/>• GitHub Discussions (Teknik tartışmalar)</small>"]
     
     %% Takım Liderleri - İkinci Seviye
     BackendLideri["Melike Kara - Backend Takım Lideri<br/><small>• Backend ekibinin yönetimi<br/>• Teknik kararların alınması<br/>• Kod kalitesi ve standartların belirlenmesi</small>"]
+    BackendYardimciLideri["M. Çağatay Balı - Backend Yardımcı Lideri<br/><small>• Backend mimarisi<br/>• Teknik yönlendirme<br/>• Kod review süreçleri</small>"]
+    
     BackendDanismani["Ömer Talha Acet - Backend Danışmanı<br/><small>• Teknik danışmanlık ve mentorluk<br/>• Kod review ve best practice önerileri<br/>• Esnek çalışma saatleri ile destek</small>"]
+    
     FrontendLideri["Sena Nur Özcan - Frontend Takım Lideri<br/><small>• Frontend ekibinin yönetimi<br/>• UI/UX standartlarının belirlenmesi<br/>• Kullanıcı deneyimi optimizasyonu</small>"]
-    VeriBilimiLideri["Orhan Murat Tuncer - Veri Bilimi Lideri<br/><small>• Veri analizi ve modelleme ekibinin yönetimi<br/>• Makine öğrenmesi stratejilerinin belirlenmesi<br/>• Deprem veri analizi ve tahmin sistemleri</small>"]
-    YapayZekaLideri["Şeyda Öksüzoğlu - Yapay Zeka Takım Lideri<br/><small>• AI model geliştirme ve eğitimi<br/>• Deprem tahmin sistemlerinin geliştirilmesi<br/>• Model optimizasyonu ve performans takibi</small>"]
+    FrontendYardimciLideri["Zeynep Lal Kaşıkçı - Frontend Yardımcı Lideri<br/><small>• Frontend mimarisi<br/>• Component kütüphanesi yönetimi<br/>• Figma entegrasyonu</small>"]
+    
+    VeriBilimiLideri["Taylan Kılıçöz - Veri Bilimi Lideri<br/><small>• Veri analizi ve modelleme ekibinin yönetimi<br/>• Makine öğrenmesi stratejilerinin belirlenmesi<br/>• Deprem veri analizi ve tahmin sistemleri<br/>• Yapay zeka modellerinin yönetimi</small>"]
+    VeriBilimiYardimciLideri["Mehmet Nur Kavan - Veri Bilimi Yardımcı Lideri<br/><small>• Derin öğrenme modelleri<br/>• Görüntü işleme sistemleri<br/>• Veri bilimi ekip koordinasyonu</small>"]
+    
     TestLideri["Ayçin Kapar - Test Lideri<br/><small>• Test stratejilerinin belirlenmesi<br/>• Test otomasyonu ve kalite kontrol<br/>• Hata yönetimi ve raporlama</small>"]
+    
     GuvenlikLideri["Adham Rashed - Siber Güvenlik Lideri<br/><small>• Güvenlik politikalarının belirlenmesi<br/>• Sistem güvenliği ve veri koruma<br/>• Güvenlik testleri ve risk analizi</small>"]
     
-    %% Takım Üyeleri - Üçüncü Seviye
+    DevOpsLideri["Elif Dicle Pamuk - DevOps Lideri<br/><small>• DevOps süreçlerinin yönetimi<br/>• CI/CD pipeline kurulumu<br/>• Docker ve deployment yönetimi</small>"]
+    
+    %% Dokümantasyon ve Kalite
+    DokumantasyonSorumlusu["Sevdanur Aydoğan - Dokümantasyon Sorumlusu<br/><small>• Teknik dokümantasyon standartları<br/>• API dokümantasyonu<br/>• Kullanıcı kılavuzları</small>"]
+    
     %% Backend Takımı
+    BackendEkipKoordinatoru["Gizem Sarı - Backend Ekip Koordinatörü<br/><small>• Java, Python, C# geliştirme<br/>• Spring Boot ile mikroservis<br/>• Backend ekip koordinasyonu</small>"]
+    
+    %% Go Notification System Ekibi
+    GoEkipLideri["Oytun Yeldan - Go Notification System Ekip Lideri<br/><small>• Go ile backend geliştirme<br/>• Veritabanı entegrasyonu<br/>• Bildirim sistemi mimarisi</small>"]
+    GoGelistirici1["İbrahim Bayburtlu - Go Geliştirici<br/><small>• Java ve Go ile geliştirme<br/>• Backend sistem geliştirme</small>"]
+    GoGelistirici2["Mehmet Melih Var - Go Geliştirici<br/><small>• Python, C ve Go dilleri<br/>• Veri işleme ve otomasyon</small>"]
+    
+    %% Backend Geliştiriciler
     BackendGelistirici1["Uğur Kaan KOÇ - Backend Geliştirici<br/><small>• .NET ve Angular ile geliştirme<br/>• API tasarımı ve entegrasyonu<br/>• Backend sistem optimizasyonu</small>"]
     BackendGelistirici2["Emre Karabacak - Backend Geliştirici<br/><small>• Python ve web teknolojileri ile geliştirme<br/>• Veritabanı yönetimi ve optimizasyonu<br/>• Backend servis geliştirme</small>"]
     BackendGelistirici3["Nazif Karaca - Backend Geliştirici<br/><small>• Backend/Frontend entegrasyonu<br/>• Veritabanı optimizasyonu<br/>• Web uygulama geliştirme</small>"]
@@ -24,76 +69,107 @@ graph LR
     BackendGelistirici5["Fehmi ÜN - .NET Developer<br/><small>• .NET Core 8+ geliştirme<br/>• CQRS, Mediator, Repository implementasyonu<br/>• Microservice mimarisi geliştirme</small>"]
     BackendGelistirici6["Salih Can Tursun - Backend Geliştirici<br/><small>• Backend sistem geliştirme<br/>• Web servisleri geliştirme<br/>• Uzaktan çalışma desteği</small>"]
     BackendGelistirici7["Kadir Gürtürk - Backend Geliştirici<br/><small>• Web backend sistemleri geliştirme<br/>• Frontend entegrasyonu<br/>• Nöbetleşe çalışma desteği</small>"]
+    BackendGelistirici10["Atakan Aktakka - Backend Geliştirici<br/><small>• Web, backend, full stack<br/>• Beginner Flutter</small>"]
+    BackendGelistirici11["Atakan Yeşilkayalı - Backend Geliştirici<br/><small>• Mobil uygulama ve web geliştirme<br/>• Backend ve frontend</small>"]
+    BackendGelistirici12["Erkan Gürbüz - Backend Geliştirici<br/><small>• Yazılım geliştirme</small>"]
     
     %% Frontend Takımı
     FrontendGelistirici1["Eray Özkan - Frontend Geliştirici<br/><small>• Web geliştirme ve optimizasyon<br/>• Frontend/Backend entegrasyonu<br/>• Kullanıcı arayüzü geliştirme</small>"]
-    UIUXTasarimci["Furkan Esad Uzun - UI/UX Tasarımcı<br/><small>• Web ve mobil arayüz tasarımı<br/>• Kullanıcı deneyimi optimizasyonu<br/>• Responsive tasarım geliştirme</small>"]
+    FrontendGelistirici2["Ozan Şentürk - Frontend Geliştirici<br/><small>• Frontend web development<br/>• React.js framework<br/>• Machine learning</small>"]
+    FrontendGelistirici3["BZO - Frontend Geliştirici<br/><small>• Frontend geliştirme</small>"]
+    FrontendGelistirici4["Gizem Çoban - Frontend Geliştirici<br/><small>• Masaüstü ve web uygulama geliştirme</small>"]
     
     %% Veri Bilimi Takımı
     VeriAnalisti1["Furkan GÜNEŞ - Veri Analisti<br/><small>• Python ile veri analizi<br/>• Makine öğrenmesi modelleme<br/>• Deprem veri analizi ve risk modelleme</small>"]
     VeriAnalisti2["Evindar Üçdere - Veri Analisti<br/><small>• Python ile görüntü işleme<br/>• Veri analizi ve işleme<br/>• Görsel veri analizi</small>"]
     VeriAnalisti3["Nisa Nur Aydoğdu - Veri Analisti<br/><small>• Veri analizi ve bilim<br/>• Veri toplama ve işleme<br/>• Ürün geliştirme</small>"]
-    VeriAnalisti4["Aslı Özdemir - Veri Analisti<br/><small>• SQL ve Python ile veri analizi<br/>• Veritabanı tasarımı<br/>• Veri analizi ve raporlama</small>"]
-    VeriAnalisti5["Taylan Kılıçöz - Veri Analisti<br/><small>• Veri analizi ve işleme<br/>• İş zekası ve raporlama<br/>• 15+ yıl yönetim tecrübesi</small>"]
-    
-    %% Test Takımı
-    KaliteGuvenceUzmani["İrem Çakmak - QA Engineer<br/><small>• Java ve Python ile test otomasyonu<br/>• Test ve analiz<br/>• Kalite kontrol ve raporlama</small>"]
+    VeriAnalisti7["Ozan Özgöçer - Veri Analisti<br/><small>• Yazılım ve veri analizi</small>"]
+    VeriAnalisti8["Yusuf Bender - Veri Analisti<br/><small>• Veri İşleme ve Analiz</small>"]
+    VeriAnalisti9["Selma Bütün - Veri Analisti<br/><small>• Yapay zeka ve Python</small>"]
     
     %% Siber Güvenlik Takımı
     VeriGuvenligiSorumlusu["Mustafa Uçmaz - Veri Güvenliği Sorumlusu<br/><small>• Sistem güvenliği yönetimi<br/>• Veri güvenliği ve koruma<br/>• Güvenlik testleri ve raporlama</small>"]
     
+    %% DevOps Takımı
+    DevOpsUzmani["Kaan Ilgın - DevOps Mühendisi<br/><small>• Docker ile paketleme ve dağıtım<br/>• Yalıtımlı ortam kurulumu<br/>• Cloud alanında bilgi danışmanlığı</small>"]
+    
+    %% Test Takımı
+    TestUzmani["Ahmet Kürşat Dişbudak - Test Uzmanı<br/><small>• Yazılım test uzmanlığı<br/>• Test senaryoları oluşturma<br/>• Hata raporlama</small>"]
+    
     %% Proje Hedefleri ve Prensipleri
-    ProjeHedefleri["Proje Hedefleri ve Prensipleri<br/><small>• Tamamen açık kaynak ve ücretsiz hizmet<br/>• Sonya Topluluğu'na ait<br/>• Gönüllü katkı temelli<br/>• Asana ile organizasyon yönetimi</small>"]:::projectGoals
+    ProjeHedefleri["Proje Hedefleri ve Prensipleri<br/><small>• Tamamen açık kaynak ve ücretsiz hizmet<br/>• Sonya Topluluğu'na ait<br/>• Gönüllü katkı temelli<br/>• GitHub Projects ile proje yönetimi</small>"]
 
     %% Hiyerarşik Bağlantılar
+    SonyaYonetimi --> ToplulukYonetimi
+    SonyaYonetimi --> YazilimYonetimi
+    YazilimYonetimi --> ProjectTitle
     ProjectTitle --> ProjeHedefleri
     ProjeHedefleri --> ProjeLideri
-    ProjeLideri --> ProjeKoordinatoru
     
+    %% Proje Lideri ve Yardımcıları
+    ProjeLideri --> ProjeKoordinatoru
+    ProjeLideri --> YardimciKoordinatoru
+    
+    %% Proje Koordinatörü ve Yardımcısının Sorumlulukları
+    ProjeKoordinatoru --> ScrumMaster
+    ProjeKoordinatoru --> GitHubYonetimi
+    YardimciKoordinatoru --> IletisimKanallari
+    YardimciKoordinatoru --> DokumantasyonSorumlusu
+    
+    %% Takım Liderleri
     ProjeLideri --> BackendLideri
-    ProjeLideri --> BackendDanismani
     ProjeLideri --> FrontendLideri
     ProjeLideri --> VeriBilimiLideri
-    ProjeLideri --> YapayZekaLideri
     ProjeLideri --> TestLideri
     ProjeLideri --> GuvenlikLideri
+    ProjeLideri --> DevOpsLideri
+    ProjeLideri --> BackendDanismani
+    
+    %% Yardımcı Liderler
+    BackendLideri --> BackendYardimciLideri
+    FrontendLideri --> FrontendYardimciLideri
+    VeriBilimiLideri --> VeriBilimiYardimciLideri
     
     %% Koordinasyon ilişkileri
-    ProjeKoordinatoru -.-> BackendLideri
-    ProjeKoordinatoru -.-> BackendDanismani
-    ProjeKoordinatoru -.-> FrontendLideri
-    ProjeKoordinatoru -.-> VeriBilimiLideri
-    ProjeKoordinatoru -.-> YapayZekaLideri
-    ProjeKoordinatoru -.-> TestLideri
-    ProjeKoordinatoru -.-> GuvenlikLideri
+    ScrumYonetimi -.-> BackendLideri
+    ScrumYonetimi -.-> FrontendLideri
+    ScrumYonetimi -.-> VeriBilimiLideri
+    ScrumYonetimi -.-> TestLideri
+    ScrumYonetimi -.-> GuvenlikLideri
+    ScrumYonetimi -.-> DevOpsLideri
     
     %% Takım Bağlantıları
-    BackendLideri --> BackendGelistirici1
-    BackendLideri --> BackendGelistirici2
-    BackendLideri --> BackendGelistirici3
-    BackendLideri --> BackendGelistirici4
-    BackendLideri --> BackendGelistirici5
-    BackendLideri --> BackendGelistirici6
-    BackendLideri --> BackendGelistirici7
+    BackendYardimciLideri --> BackendEkipKoordinatoru
+    BackendYardimciLideri --> GoEkipLideri
     
-    FrontendLideri --> FrontendGelistirici1
-    FrontendLideri --> UIUXTasarimci
+    GoEkipLideri --> GoGelistirici1
+    GoEkipLideri --> GoGelistirici2
     
-    VeriBilimiLideri --> VeriAnalisti1
-    VeriBilimiLideri --> VeriAnalisti2
-    VeriBilimiLideri --> VeriAnalisti3
-    VeriBilimiLideri --> VeriAnalisti4
-    VeriBilimiLideri --> VeriAnalisti5
+    BackendEkipKoordinatoru --> BackendGelistirici1
+    BackendEkipKoordinatoru --> BackendGelistirici2
+    BackendEkipKoordinatoru --> BackendGelistirici3
+    BackendEkipKoordinatoru --> BackendGelistirici4
+    BackendEkipKoordinatoru --> BackendGelistirici5
+    BackendEkipKoordinatoru --> BackendGelistirici6
+    BackendEkipKoordinatoru --> BackendGelistirici7
+    BackendEkipKoordinatoru --> BackendGelistirici10
+    BackendEkipKoordinatoru --> BackendGelistirici11
+    BackendEkipKoordinatoru --> BackendGelistirici12
     
-    YapayZekaLideri --> VeriAnalisti1
-    YapayZekaLideri --> VeriAnalisti2
+    FrontendYardimciLideri --> FrontendGelistirici1
+    FrontendYardimciLideri --> FrontendGelistirici2
+    FrontendYardimciLideri --> FrontendGelistirici3
+    FrontendYardimciLideri --> FrontendGelistirici4
     
-    TestLideri --> KaliteGuvenceUzmani
+    VeriBilimiYardimciLideri --> VeriAnalisti1
+    VeriBilimiYardimciLideri --> VeriAnalisti2
+    VeriBilimiYardimciLideri --> VeriAnalisti3
+    VeriBilimiYardimciLideri --> VeriAnalisti7
+    VeriBilimiYardimciLideri --> VeriAnalisti8
+    VeriBilimiYardimciLideri --> VeriAnalisti9
     
     GuvenlikLideri --> VeriGuvenligiSorumlusu
     
-    %% Stil Tanımlamaları
-    classDef projectTitle fill:#f9f9f9,stroke:#333,stroke-width:1px;
-    classDef projectGoals fill:#e6f3ff,stroke:#333,stroke-width:1px;
-    class projectTitle projectTitle;
-    class projectGoals projectGoals;
+    DevOpsLideri --> DevOpsUzmani
+    
+    TestLideri --> TestUzmani
